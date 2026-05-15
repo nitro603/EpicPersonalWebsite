@@ -9,6 +9,26 @@ section{
     scroll-snap-align: start;
 }
 
+.hero{
+    background-color: greenyellow;
+}
+
+.portfolio{
+    background-color: red;
+}
+
+.about-me{
+    background-color: grey;
+}
+
+.projects{
+    background-color: aquamarine;
+}
+
+.contacts{
+    background-color: yellow;
+}
+
 
 .tab-menu {
     margin-bottom: 20px;
