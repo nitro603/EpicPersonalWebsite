@@ -52,10 +52,94 @@ section{
     scroll-snap-align: start;
 }
 
-.hero{
+.hero {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* keep background so existing color remains visible during dev */
     background-color: greenyellow;
 }
 
+/* Content area: left column */
+.hero__content {
+    flex: 1 1 55%;
+    min-width: 220px;
+}
+
+/* Image wrapper: right column */
+.hero__image-wrapper {
+    flex: 0 0 35%;
+    max-width: 35%;
+    /* Reserve visual space to avoid CLS. Adjust aspect-ratio as needed. */
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3f3f3;
+}
+
+/* The image fills its wrapper and is cropped if necessary */
+.hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Typography tweaks for hero */
+.hero__title {
+    margin: 0 0 0.5rem 0;
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+    line-height: 1.1;
+}
+
+.hero__subtitle {
+    margin: 0 0 1rem 0;
+    font-size: clamp(1rem, 1.6vw, 1.125rem);
+    color: #111;
+}
+
+.hero__lead {
+    margin: 0.5rem 0 0 0;
+    font-weight: 600;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .hero__content {
+        order: 1;
+        max-width: 100%;
+    }
+
+    .hero__image-wrapper {
+        order: 2;
+        max-width: 60%;
+        width: 60%;
+        margin: 1rem auto 0 auto;
+        aspect-ratio: 1 / 1;
+    }
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
+    }
+}
 .portfolio{
     background-color: red;
 }
