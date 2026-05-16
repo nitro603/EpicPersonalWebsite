@@ -1,5 +1,48 @@
 /* Style the tab buttons */
-        
+@font-face {
+    font-family: 'Axiforma';
+    src: url('./Assets/Fonts/Axiforma-Regular.ttf') format('truetype');
+    font-weight: 400; /* Normal text */
+    font-style: normal;
+}
+
+/* 2. ITALIC */
+@font-face {
+    font-family: 'Axiforma';
+    src: url('./Assets/Fonts/Axiforma-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* 3. MEDIUM (Great for sub-headers or tabs) */
+@font-face {
+    font-family: 'Axiforma';
+    src: url('./Assets/Fonts/Axiforma-Medium.ttf') format('truetype');
+    font-weight: 500; 
+    font-style: normal;
+}
+
+/* 4. SEMIBOLD */
+@font-face {
+    font-family: 'Axiforma';
+    src: url('./Assets/Fonts/Axiforma-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* 5. BOLD (Perfect for main H1 titles) */
+@font-face {
+    font-family: 'Axiforma';
+    src: url('./Assets/Fonts/Axiforma-Bold.ttf') format('truetype');
+    font-weight: 700; /* Bold */
+    font-style: normal;
+}
+
+
+body{
+    font-family: 'Axiforma', sans-serif;
+}
+
 html{
     scroll-snap-type: y mandatory;
 }
