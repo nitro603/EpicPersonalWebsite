@@ -14,3 +14,14 @@
             document.getElementById(tabId).classList.add("active");
             evt.currentTarget.classList.add("active");
         }
+
+
+const target = document.querySelector("#hero");
+console.log(target.nodeType)
+const observer  = new IntersectionObserver((entries) => {
+
+    console.log("howdy there");
+
+
+}, {});       
+observer.observe(target) ;
