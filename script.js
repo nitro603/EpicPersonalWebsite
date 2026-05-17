@@ -17,10 +17,23 @@
 
 
 const target = document.querySelector("#hero");
-console.log(target.nodeType)
 const observer  = new IntersectionObserver((entries) => {
+    if(entries[0].isIntersecting){
 
-    console.log("howdy there");
+        
+        const heroContentElement = entries[0].target.children[0].children[0];
+        console.log(heroContentElement);
+        console.log(heroContentElement.children.length)
+        for( i = 0; i < heroContentElement.children.length; i++){
+            console.log("howdy there 3 times")
+        }
+
+        
+        const imageWrapperElement = entries[0].target.children[0].children[1];
+        console.log(imageWrapperElement);
+    }else{
+        //remove show tag
+    }
 
 
 }, {});       

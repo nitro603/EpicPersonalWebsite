@@ -51,6 +51,8 @@ section{
     height:100vh;
     scroll-snap-align: start;
 }
+/*-----Hero Section Animation-----*/
+
 
 .hero {
     box-sizing: border-box;
@@ -75,7 +77,6 @@ section{
 .hero__image-wrapper {
     flex: 0 0 35%;
     max-width: 35%;
-    /* Reserve visual space to avoid CLS. Adjust aspect-ratio as needed. */
     aspect-ratio: 4 / 5;
     overflow: hidden;
     border-radius: 8px;
@@ -91,13 +92,6 @@ section{
     height: 100%;
     object-fit: cover;
     display: block;
-}
-
-/* Typography tweaks for hero */
-.hero__title {
-    margin: 0 0 0.5rem 0;
-    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
-    line-height: 1.1;
 }
 
 .hero__subtitle {
